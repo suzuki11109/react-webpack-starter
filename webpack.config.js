@@ -1,17 +1,24 @@
 module.exports = {
   devtool: 'eval-source-map',
-  entry:  __dirname + "/src/main.js",
+  entry:  __dirname + "/src/main.jsx",
   output: {
     path: __dirname + "/public",
     filename: "bundle.js"
   },
   module: {
-    test: /\.jsx?$/,
-    exclude: /node_modules/,
-    loader: 'babel',
-    query: {
-      presets: ['es2015', 'react']
-    }
+    loaders: [
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          presets: ['es2015','react']
+        }
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   },
   devServer: {
     contentBase: "./public",
