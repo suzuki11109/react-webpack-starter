@@ -4,5 +4,5 @@ import Greeter from './Greeter';
 
 render(
   <Greeter hello="react" />,
-  document.getElementById('root')
+  document.getElementById('app')
 );
