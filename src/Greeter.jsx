@@ -1,5 +1,6 @@
 import React from 'react';
+import styles from './Greeter.css';
 
 export default function({ hello }) {
-  return <div>{hello + 5555}</div>;
+  return <div className={styles.root}>{hello + 5555}</div>;
 }
