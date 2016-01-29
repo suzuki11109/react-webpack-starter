@@ -1,0 +1,17 @@
+{
+  "name": "react_todo_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack && webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
