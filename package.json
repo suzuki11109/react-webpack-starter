@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack && webpack-dev-server",
     "build": "NODE_ENV=production node_modules/.bin/webpack –config ./webpack.prod.config.js --progress",
-    "test": "mocha --compilers js:babel-core/register --require ./test_helper.js $(find src -name '*_spec.js' -o -name '*_spec.jsx') --reporter=nyan",
+    "test": "mocha --compilers js:babel-core/register,css:css-null-compiler.js --require ./test_helper.js $(find src -name '*_spec.js' -o -name '*_spec.jsx') --reporter=nyan",
     "test:watch": "npm run test -- --watch --watch-extensions jsx"
   },
   "keywords": [],
@@ -22,10 +22,12 @@
     "chai": "^3.5.0",
     "chai-immutable": "^1.5.3",
     "css-loader": "^0.23.1",
+    "enzyme": "^1.5.0",
     "html-webpack-plugin": "^2.7.2",
     "jsdom": "^8.0.1",
     "mocha": "^2.4.5",
     "postcss-loader": "^0.8.0",
+    "react-addons-test-utils": "^0.14.7",
     "react-transform-hmr": "^1.0.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.12",
